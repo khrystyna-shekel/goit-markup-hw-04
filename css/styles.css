@@ -1,0 +1,374 @@
+:root {
+    --dark: #2E2F42;
+    --primary-brand: #4D5AE5;
+    --white-bckg:#FFFFFF;
+    --modal-bckg:#FCFCFC;
+    --pressed-state:#404BBF;
+    --success:#31D0AA;
+    --text:#434455;
+    --subtle-text:#8E8F99;
+    --accent: #E7E9FC;
+    --light:#F4F4FD;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    color: var(--text);
+    background-color:var(--white-bckg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.link {
+    text-decoration: none;
+}
+
+ /* BASE STYLES */
+
+.container {
+    width: 1158px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section {
+    padding-bottom: 120px;
+}
+
+
+.logo {
+    color: var(--primary-brand);
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.dark-logo-studio {
+    color: var(--dark);
+
+}
+
+.light-logo-studio {
+    color: var(--light);
+}
+
+.item-title {
+    color: var(--dark);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+
+}
+
+.item-descr {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    }
+
+/* HEADER */
+
+.header-container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.page-header {
+    border-bottom: 1px solid var(--accent)
+}
+
+.header-nav {
+display: flex;
+align-items: center;
+}
+
+.header-logo {
+    margin-right: 76px;   
+}
+
+.header-menu {
+    display: flex;
+    gap: 40px;
+    
+    
+}
+
+.header-menu-nav {
+    color: var(--dark); 
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.header-menu-nav:hover,
+.header-menu-nav:focus {
+    color: var(--pressed-state);
+}
+    
+.header-contacts{
+display: flex;
+gap: 40px;
+}
+
+.contacts {
+    font-style: normal;
+    margin-left: auto;
+}
+
+.contact-list a { 
+    color: var(--text);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+}
+
+.contact-list:hover,
+.contact-list:focus {
+    color: var(--pressed-state);
+}
+
+/* HERO */
+.hero-section {
+    padding: 188px 0;
+    background-color: var(--dark);
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-title {
+    max-width: 496px;
+    color: var(--WHITE, #FFF);
+        text-align: center;
+        font-size: 56px;
+        line-height: 1.07;
+        letter-spacing: 0.02em;
+        margin-bottom: 48px;
+}
+
+.hero-button {
+    min-width: 169px;
+    height: 56px;
+    border-radius: 4px;
+    border: none;
+    padding: 16px 32px;
+    cursor: pointer;
+    color: var(--WHITE, #FFF);
+    background-color: var(--primary-brand);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+}
+
+.hero-button:hover,
+.hero-button:focus {
+    background-color: var(--pressed-state);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* BENEFITS */
+.benefits-section {
+    padding: 120px 0;
+}
+
+.benefits-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    
+}
+
+.benefits-item {
+    width: 264px;
+}
+
+/* WHAT ARE WE DOING */
+
+.what-list {
+display: flex;
+justify-content: center;
+gap: 24px;
+
+}
+.section-title {
+    color: var(--dark);
+        text-align: center;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        margin-bottom: 72px;   
+        
+}
+
+/* OUR TEEM */
+.team-section {
+    background-color: var(--light);
+    padding: 120px 0;
+}
+
+.team-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    
+}
+
+.team-item {
+    border-radius: 0px 0px 4px 4px;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    background: var(--WHITE, #FFF);
+    width: calc((100% - 72px) / 4)
+}
+
+.team-title {
+margin-bottom: 72px;
+text-align: center;
+}
+
+.team-member-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 32px 0;
+   
+}
+
+
+/* PORTFOLIO */
+
+.portfolio-section {
+    padding-top: 96px;
+    padding-bottom: 120px;
+}
+
+.filter-button{
+    color: var(--primary-brand);
+        text-align: center;    
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.04em;
+        cursor: pointer;
+        border-radius: 4px;
+        border: 1px solid var(--accent);
+        background-color: var(--light);
+        padding: 12px 24px;
+    
+}
+
+.filter-button:hover,
+.filter-button:focus {
+    color: var(--white-bckg);
+    background-color: var(--pressed-state);
+    border: 1px solid transparent;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-filter {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 0;
+    margin-bottom: 72px;
+    /* min-width: none; */
+}
+
+.cards-list {
+display: flex;
+flex-wrap: wrap;
+row-gap: 48px;
+column-gap: 24px;
+
+}
+
+.card-item {
+width: calc((100% - 48) / 30);
+}
+
+.card-wrapper {
+padding: 32px 16px;
+border: 1px solid var(--accent);
+border-top: none;
+
+}
+
+/* FOOTER */
+
+.page-footer {
+    background-color: var(--dark);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.footer-logo {
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.footer-items {
+    padding: 0px;
+}
+
+.footer-text {
+    color: var(--light);
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        width: 264px;
+}
