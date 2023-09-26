@@ -10,8 +10,6 @@
     --subtle-text:#8E8F99;
     --accent: #E7E9FC;
     --light:#F4F4FD;
-    --transition-slow: 800ms ease-out;
-    --transition-fast: 300ms ease;
 }
 
 body {
@@ -126,7 +124,10 @@ button {
 }
 
 .page-header {
-    border-bottom: 1px solid var(--accent)
+    border-bottom: 1px solid var(--accent);
+    box-shadow:  2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-nav {
@@ -153,6 +154,7 @@ align-items: center;
     line-height: 1.5;
     letter-spacing: 0.02em;
     padding-bottom: 20px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -190,16 +192,17 @@ gap: 40px;
     padding-bottom: 24px;
 }
 
-.contact-list a { 
+.contacts-link { 
     color: var(--text);
         font-size: 16px;
         font-weight: 400;
         line-height: 1.5;
         letter-spacing: 0.02em;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-list:hover,
-.contact-list:focus {
+.contacts-link:hover,
+.contacts-link:focus {
     color: var(--pressed-state);
 }
 
@@ -212,6 +215,7 @@ gap: 40px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    max-width: 1440px;
 
 }
 
@@ -243,7 +247,7 @@ gap: 40px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    transition: background-color var(--transition-fast) 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -351,13 +355,13 @@ align-items: center;
 background-color: var(--primary-brand);
 border-radius: 50%;
 padding: 8px;
-transition: background-color var(--transition-fast);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .team-socials-link:hover,
 .team-social-link:focus {
-    background-color: var(--success);
+    background-color: var(--pressed-state);
 
 }
 
@@ -426,7 +430,10 @@ color: var(--pressed-state);
         border: 1px solid var(--accent);
         background-color: var(--light);
         padding: 12px 24px;
-        transition: background-color var(--transition-fast), color var(--transition-fast), border var(--transition-fast);
+       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -459,8 +466,21 @@ column-gap: 24px;
 width: calc((100% - 48) / 30);
 }
 
+.cards-link {
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cards-link:hover,
+.cards-link:focus {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .cards-picture-wrapper {
 position: relative;
+overflow: hidden;
 
 }
 
@@ -488,7 +508,8 @@ color: var(--light);
 background-color: var(--primary-brand);
 line-height: 1.5;
 letter-spacing: 0.02em;
-transition: opacity var(--transition-slow);
+transform: translateY(100%);
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 
 }
 
@@ -549,7 +570,7 @@ align-items: center;
 background-color: var(--primary-brand);
 padding: 8px;
 border-radius: 50%;
-transition: backgraund-color var(--transition-fast);
+transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -570,8 +591,8 @@ left: 0;
 
 width: 100%;
 height: 100%;
-background-color: var(--modal-overlay);
-transition: opacity 200ms linear, cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+background-color: rgba(46, 47, 66, 0.4);
+transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -587,7 +608,7 @@ transform: translate(-50%, -50%);
 top: 50%;
 left: 50%;
 width: 408px;
-height: 584px;
+min-height: 584px;
 border-radius: 4px;
 background-color: var(--modal-bckg);
 box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
@@ -608,10 +629,10 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: var(--dark);
     background-color: var(--accent);
     padding: 0;
-    transition: backgroung-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-close-btn:hover,
 .modal-close-btn:focus {
 background-color:var(--pressed-state);
